@@ -34,14 +34,10 @@
                                 <li> <a href="<?=base_url('pengguna_Controller/kasir');?>"><span class="hide-menu"><i class="fa fa-money"></i> Kasir</span></a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-suitcase"></i><span class="hide-menu">Data Obat<span class="label label-rouded label-warning pull-right">6</span></span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-suitcase"></i><span class="hide-menu">Data Obat</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="ui-alert.html">Alert</a></li>
-                                <li><a href="ui-button.html">Button</a></li>
-                                <li><a href="ui-dropdown.html">Dropdown</a></li>
-                                <li><a href="ui-progressbar.html">Progressbar</a></li>
-                                <li><a href="ui-tab.html">Tab</a></li>
-                                <li><a href="ui-typography.html">Typography</a></li>
+                                <li><a href="<?=base_url('obat_controller/tambah');?>"><i class="fa fa-plus"></i> Tambah Obat</a></li>
+                                <li><a href="<?=base_url('obat_controller/view_Obat');?>"><i class="fa fa-medkit"></i> Obat</a></li>
                             </ul>
                         </li>
                         <!-- <li class="nav-label">Features</li>

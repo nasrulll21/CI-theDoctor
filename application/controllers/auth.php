@@ -5,7 +5,7 @@ class auth extends CI_Controller{
           parent::__cunstruct();
           $this->load->model('model_login');
     }
-    function login(){
+    function index(){
         if(isset($_POST['submit'])){
             $username = $this->input->post['username'];
             $password  = $this->input->post['pass'];

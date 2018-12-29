@@ -15,7 +15,7 @@ class obat_controller extends CI_Controller {
 		$this->load->view('apps/footer');
     }
 
-    public function add_obat(){
+    public function tambah(){
         $this->load->view('apps/header');
 		$this->load->view('apps/admin');
 		$this->load->view('apps/sidebar');
@@ -23,11 +23,22 @@ class obat_controller extends CI_Controller {
 		$this->load->view('apps/footer');
     }
 
-    public function edit($id=''){
-         echo $this->ObatModel->getID_obat($id);    }
+    public function act_add(){
+        $this->ObatModel->add_obat();
+        redirect('obat_controller/view_Obat', 'refresh');
+    }
 
-    public function act_edit(){
-        $this->ObatModel->edit_obat();
+    public function edit($id=''){
+         $query['data'] = $this->ObatModel->getID_obat($id);
+         $this->load->view('apps/header');
+         $this->load->view('apps/admin');
+         $this->load->view('apps/sidebar');
+         $this->load->view('main/edit_obat',$query);
+         $this->load->view('apps/footer');
+    }
+
+    public function act_edit($id=''){
+        $this->ObatModel->edit_obat($id);
         redirect('obat_controller/view_Obat', 'refresh');	
     }
 

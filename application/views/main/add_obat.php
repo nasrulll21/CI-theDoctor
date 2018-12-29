@@ -20,43 +20,41 @@
                     <div class="col-lg-6">
                         <div class="card">
                             <div class="card-title">
-                                <h4>Form Edit</h4>
+                                <h4>Form Input Data</h4>
                             </div>
                             <div class="card-body">
                                 <div class="basic-form">
-                                    <?php foreach($data as $obat) :?>
-                                    <form method="post" action="<?=base_url('obat_controller/act_edit/'); echo $obat->id_obat?>">
+                                    <form method="post" action="<?=base_url('obat_controller/act_add/');?>">
                                     <div class="form-group">
                                             <br>
                                             <p>&nbsp;ID obat</p>
-                                            <input type="text" class="form-control input-default " disabled placeholder="Name" name="id" value="<?php echo $obat->id_obat?>">
+                                            <input type="text" class="form-control input-default " placeholder="Name" name="id">
                                         </div>
                                         <div class="form-group">
                                             <br>
                                             <p>&nbsp;nama obat</p>
-                                            <input type="text" class="form-control input-default " placeholder="Name" name="nmobt" value="<?php echo $obat->nama_obat?>">
+                                            <input type="text" class="form-control input-default " placeholder="Name" name="nmobt">
                                         </div>
                                         <div class="form-group">
                                             <br>
                                             <p>&nbsp;jenis</p>
-                                            <input type="text" class="form-control input-default " placeholder="username" name="jenis" value="<?php echo $obat->satuan?>">
+                                            <input type="text" class="form-control input-default " placeholder="username" name="jenis">
                                         </div>
                                         <div class="form-group">
                                             <br>
                                             <p>&nbsp;harga</p>
-                                            <input type="number" class="form-control input-default " placeholder="number" name="hrg" value="<?php echo $obat->harga?>">
+                                            <input type="number" class="form-control input-default " placeholder="number" name="hrg">
                                         </div>
                                         <div class="form-group">
                                             <br>
                                             <p>&nbsp;stock</p>
-                                            <input type="number" class="form-control input-default " placeholder="Input Default" name="stk" value="<?php echo $obat->stock?>">
+                                            <input type="number" class="form-control input-default " placeholder="Input Default" name="stk">
                                         </div>
                                         <div class="form-group">
                                             <br>
                                             <button type="submit" class="btn btn-info">&nbsp;&nbsp;&nbsp;<i class="fa fa-send-o"></i>&nbsp;send&nbsp;&nbsp;&nbsp;</button>
                                         </div>
                                     </form>
-                                    <?php endforeach ?>
                                 </div>
                             </div>
                         </div>

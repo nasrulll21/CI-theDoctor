@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +44,7 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('<?=base_url('assets/images/bg-01.jpg');?>');">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" >
+				<form class="login100-form validate-form" id="loginform" action="<?=base_url('auth/verify');?>" method="POST">
 					<span class="login100-form-logo">
 						<i >
 						<img src="<?=base_url('assets/images/ular.png');?>" height="150" width="150">
@@ -66,12 +65,6 @@
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
 
-					<div class="contact100-form-checkbox">
-						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-						<label class="label-checkbox100" for="ckb1">
-							Remember me
-						</label>
-					</div>
 
 					<div class="container-login100-form-btn">
 						<input type="submit"name="login" value="LOGIN" class="login100-form-btn">

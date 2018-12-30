@@ -1,10 +1,6 @@
 <?php
 
 class model_login extends CI_Model{
-
-    public function __construct(){
-        $this->load->database();
-    }
     
     
     function login($username,$password){

@@ -1,6 +1,13 @@
 <?php
 class userModel extends CI_Model{
 
+
+
+    private $table_user     ='user';
+
+
+
+    
     public function __construct(){
         $this->load->database();
     }
@@ -44,6 +51,11 @@ class userModel extends CI_Model{
         $this->db->where('username', $id);
         $this->db->delete('user');
     }
+
+    public function getLoginData($data) {
+		$result = $this->db->get_where($this->table_user,$data);
+		return $result;
+	}
 
     public function add_akun(){
         $data= array(

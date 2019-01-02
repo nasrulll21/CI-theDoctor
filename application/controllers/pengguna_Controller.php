@@ -42,12 +42,26 @@ class pengguna_Controller extends CI_Controller {
 			$this->load->view('main/tambah_pengguna', $data);
 			$this->load->view('apps/footer');
 		}
+
+		public function tambah_pasien(){
+			$this->load->view('main/Registration.php');
+		}
+
+		public function view_user(){
+			$this->load->view('main/view_user');
+		}
 	
 		public function act_addAkun(){
 			$this->userModel->add_akun();
 			redirect('Admin', 'refresh');
 		}
 
+		public function act_addPasien(){
+			$we = $this->userModel->add_pasien();
+			redirect('auth', 'refresh');
+		}
+
+		
     public function perawat(){
 			$data['user'] = $this->userModel->get_perawat();
 			$this->load->view('apps/header');

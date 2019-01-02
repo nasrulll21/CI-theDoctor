@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="<?=base_url('assets/Admin/images/miniLogo.png');?>">
+    <title>DOCTOR-Check Health</title>
+    <!-- Bootstrap Core CSS -->
+    
+    <link href="<?=base_url('assets/Admin/css/lib/bootstrap/bootstrap.min.css');?>" rel="stylesheet">
+    <!-- Custom CSS -->
+    
+    <link href="<?=base_url('assets/Admin/css/helper.css');?>" rel="stylesheet">
+    
+    <link href="<?=base_url('assets/Admin/css/style.css');?>" rel="stylesheet">
+    
+    <link href="<?=base_url('assets/doctor/css/style.css');?>" rel="stylesheet">
+
+
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
+    <!--[if lt IE 9]>
+    <script src="https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar">
+    <!-- Preloader - style you can find in spinners.css -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+			<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+    </div>
+    <!-- Main wrapper  -->
+    <div id="main-wrapper">
+        <!-- header header  -->
+        <div class="header">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- Logo -->
+                <div class="navbar-header">
+                
+                    <a class="navbar-brand" href="../index.php">
+                        <!-- Logo icon -->
+                        <b><img src="<?=base_url('assets/img/logo_kecil1.png');?>" alt="homepage" class="dark-logo" /></b>
+                    </a>
+                </div>
+                <!-- End Logo -->
+            </nav>
+        </div>
+        <!-- End header header -->
+            <!-- Container fluid  -->
+            <div class="container-fluid">
+                <!-- Start Page Content -->
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <div class="card card-outline-primary">
+                            <div class="card-header">
+                                <h4 class="m-b-0 text-white">REGISTRASI</h4>
+                            </div>
+                            <div class="card-body">
+                                <form  action="<?=base_url('pengguna_Controller/act_addPasien');?>" method="post">
+                                    <div class="form-body">
+                                        <h3 class="card-title m-t-15">Biodata</h3>
+                                        <hr>
+                                        <div class="row p-t-20">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Nama Lengkap</label>
+                                                    <input type="text" id="nama" class="form-control" placeholder="Nama Lengkap" name="nama" required></div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Username</label>
+                                                    <input type="text" id="username" class="form-control form-control-danger" placeholder="username" name="username" required></div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Password</label>
+                                                    <input type="password" id="Password" class="form-control form-control-danger" placeholder="Password" required name="pass"
+                                                    name="pass">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Jenis Kelamin</label>
+                                                    <select class="form-control custom-select" required name="jk">
+                                                        <option value="pria">Pria</option>
+                                                        <option value="wanita">Wanita</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Tanggal Lahir</label>
+                                                    <input type="date" class="form-control" placeholder="dd/mm/yyyy" required name="tgl">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Agama</label>
+                                                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1"required name="agama">
+                                                        <option value="islam">Islam</option>
+                                                        <option value="kristen">Kristen</option>
+                                                        <option value="hindu">Hindu</option>
+                                                        <option value="buddha">Buddha</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Umur</label>
+                                                    <input type="text" id="umur" class="form-control form-control-danger" placeholder="umur" name="umur"></div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Nama Orang Tua</label>
+                                                    <input type="text" id="username" class="form-control form-control-danger" placeholder="Orang Tua" name="nama_ortu"></div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="control-label">Golongan Darah  :</label>
+                                                    <label class="radio-container m-r-30" required name="gol">
+                                        A &nbsp;
+                                            <input type="radio" checked="checked" name="gol" value='A'>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container m-r-30"name="gol">
+                                        B 
+                                            <input type="radio" name="gol" value='B'>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container m-r-30"name="gol">
+                                        AB 
+                                            <input type="radio" name="gol" value='AB'>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container
+                                        m-r-30" name="gol_darah">
+                                        0 
+                                            <input type="radio" name="gol" value="O">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                                    </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                
+                                            </div>
+                                            <div class="col-md-6"name="bpjs">
+                                                <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">BPJS  :</label>
+                                                    <label class="radio-container m-r-30"name="bpjs">
+                                        YA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input type="radio" checked="checked" name="bpjs" value="1">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container m-r-30"name="bpjs">
+                                        TIDAK &nbsp;
+                                            <input type="radio" checked="checked" name="bpjs" value="0">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                       
+                                        </label>
+                                            </div>
+                                                    </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Telepon</label>
+                                                        <input type="text" id="tlp" class="form-control form-control-danger" placeholder="Telepon" name="telp"></div>
+                                            </div>
+                                        </div>
+                                        <!--/row-->
+                                        <h3 class="box-title m-t-40">Address</h3>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="form-group">
+                                                    <label>Alamat</label>
+                                                    <input type="text" class="form-control" name="almt" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!--/row-->
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn-success" name="btn"> <i class="fa fa-check"></i> Save</button>
+                                        <button type="button" class="btn btn-inverse">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row -->
+            </div>
+            <!-- End Container fluid  -->
+            <!-- footer -->
+            <footer class="footer"> © 2018 Dokter <a href="https://colorlib.com"> Register</a></footer>
+            <!-- End footer -->
+        </div>
+        <!-- End Page wrapper  -->
+    </div>
+    <!-- End Wrapper -->
+    <!-- All Jquery -->
+    
+    <script src="<?=base_url('assets/Admin/js/lib/jquery/jquery.min.js');?>"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+   
+    <script src= "<?=base_url('assets/Admin/js/lib/bootstrap/js/popper.min.js');?>"></script>
+    
+    <script src="<?=base_url('assets/Admin/js/lib/bootstrap/js/bootstrap.min.js');?>"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    
+    <script src="<?=base_url('assets/Admin/js/jquery.slimscroll.js');?>"></script>
+    <!--Menu sidebar -->
+    
+    <script src="<?=base_url('assets/Admin/js/sidebarmenu.js');?>"></script>
+    <!--stickey kit -->
+    
+    <script src="<?=base_url('assets/Admin/js/lib/sticky-kit-master/dist/sticky-kit.min.js');?>"></script>
+    <!--Custom JavaScript -->
+    
+    <script src="<?=base_url('assets/Admin/js/custom.min.js');?>"></script>
+
+</body>
+
+</html>

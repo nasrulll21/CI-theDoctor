@@ -77,6 +77,25 @@ class userModel extends CI_Model{
         return $query;
     }
 
+    public function add_pasien(){
+        $data= array(
+            'username' => $this->input->post('username'),
+            'nama_lengkap' => $this->input->post('nama'),
+            'pass' => $this->input->post('pass'),
+            'jk' => $this->input->post('jk'),
+            'tgl_lahir' => $this->input->post('tgl'),
+            'agama' => $this->input->post('agama'),
+            'umur' => $this->input->post('umur'),
+            'nama_ortu' => $this->input->post('nama_ortu'),
+            'gol_darah' => $this->input->post('gol'),
+            'bpjs' => $this->input->post('bpjs'),
+            'telepon' => $this->input->post('telp'),
+            'alamat' => $this->input->post('almt')
+        );
+        $query = $this->db->insert('user', $data);
+        return $query;
+    }
+
     public function edit_akun($id = null){
         $data= array(
             'username' => $this->input->post('username'),

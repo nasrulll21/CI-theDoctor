@@ -126,6 +126,8 @@
                                                 </div>
                                             </div>
                                             <!--/span-->
+                                        </div>
+                                        <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label">Umur</label>
@@ -138,62 +140,47 @@
                                                     <input type="text" id="username" class="form-control form-control-danger" placeholder="Orang Tua" name="nama_ortu"></div>
                                             </div>
                                             <!--/span-->
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="control-label">Golongan Darah  :</label>
-                                                    <label class="radio-container m-r-30" required name="gol">
-                                        A &nbsp;
-                                            <input type="radio" checked="checked" name="gol" value='A'>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container m-r-30"name="gol">
-                                        B 
-                                            <input type="radio" name="gol" value='B'>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container m-r-30"name="gol">
-                                        AB 
-                                            <input type="radio" name="gol" value='AB'>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container
-                                        m-r-30" name="gol_darah">
-                                        0 
-                                            <input type="radio" name="gol" value="O">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                                    </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                
-                                            </div>
-                                            <div class="col-md-6"name="bpjs">
-                                                <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">BPJS  :</label>
-                                                    <label class="radio-container m-r-30"name="bpjs">
-                                        YA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <input type="radio" checked="checked" name="bpjs" value="1">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container m-r-30"name="bpjs">
-                                        TIDAK &nbsp;
-                                            <input type="radio" checked="checked" name="bpjs" value="0">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                       
-                                        </label>
-                                            </div>
-                                                    </div>
-                                            </div>
-
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Golongan Darah</label>
+                                                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1"required name="gol">
+                                                        <option value="A">A</option>
+                                                        <option value="B">B</option>
+                                                        <option value="AB">AB</option>
+                                                        <option value="O">O</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">BPJS</label>
+                                                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1"required name="bpjs">
+                                                        <option value="1">YA</option>
+                                                        <option value="0">TIDAK</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Nama Orang Tua</label>
+                                                    <input type="text" id="username" class="form-control form-control-danger" placeholder="Orang Tua" name="nama_ortu">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="control-label">Telepon</label>
-                                                        <input type="text" id="tlp" class="form-control form-control-danger" placeholder="Telepon" name="telp"></div>
+                                                        <input type="text" id="tlp" class="form-control form-control-danger" placeholder="Telepon" name="telp">
+                                                    </div>
                                             </div>
+                                            <!--/span-->
+                                        </div>
+                                        <div class="row">
+                                            
                                         </div>
                                         <!--/row-->
                                         <h3 class="box-title m-t-40">Address</h3>
@@ -202,7 +189,7 @@
                                             <div class="col-md-12 ">
                                                 <div class="form-group">
                                                     <label>Alamat</label>
-                                                    <input type="text" class="form-control" name="almt" required>
+                                                    <textarea class="form-control" name="almt" required placeholder="Alamat"></textarea>
                                                 </div>
                                             </div>
                                         </div>

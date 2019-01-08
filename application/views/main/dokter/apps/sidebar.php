@@ -8,7 +8,7 @@
                         <li class="nav-devider"></li>
                         <li> <a href="<?=base_url('Admin');?>" ><i class="fa fa-tachometer"></i>Dashboard</a>
                         </li>
-                        <li class="nav-label">Data Tabel Master</li>
+                        <li class="nav-label">Data Tabel</li>
                         <li><a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-bar-chart"></i><span class="hide-menu">Pemeriksaan</span></a>
                             <ul aria-expanded="false" class="collapse">
                             <!-- Admin/periksa/laboratorium

@@ -53,45 +53,6 @@
                                         </div>
                                         <div class="form-group">
                                             <br>
-                                            <p>&nbsp;Agama</p>
-                                            <select name="agama" class="form-control input-default">
-                                                <option value="islam">Islam</option>
-                                                <option value="kristen">Kristen</option>
-                                                <option value="hindu">Hindu</option>
-                                                <option value="buddha">Buddha</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <br>
-                                            <p>&nbsp;umur</p>
-                                            <input type="number" class="form-control input-default " placeholder="number" name="umur">
-                                        </div>
-                                        <div class="form-group">
-                                            <br>
-                                            <p>&nbsp;Nama Orangtua</p>
-                                            <input type="text" class="form-control input-default " placeholder="wali" name="nama_ortu">
-                                        </div>
-                                        <div class="form-group">
-                                            <br>
-                                            <p>&nbsp;Golongan Darah</p>
-                                            <select name="gol" class="form-control input-default">
-                                                <option value="A">A</option>
-                                                <option value="B">B</option>
-                                                <option value="AB">AB</option>
-                                                <option value="O">O</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <br>
-                                            <p>&nbsp;BPJS</p>
-                                            
-                                            <select name="bpjs" class="form-control input-default">
-                                                <option value="1">Ya</option>
-                                                <option value="0">Tidak</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <br>
                                             <p>&nbsp;telp</p>
                                             <input type="number" class="form-control input-default " placeholder="Input Default" name="telp">
                                         </div>
@@ -104,10 +65,10 @@
                                             <br>
                                             <p>&nbsp;Level</p>
                                             <select name="level" class="form-control input-default">
-                                                <?php foreach ($lvl as $lee) {
-                                                    echo "<option value='".$lee->id_level."'>".$lee->level."</option>";
-                                                }
-                                                ?>
+                                                <option value='1'>direktur</option>
+                                                <option value='2'>pelayanan</option>
+                                                <option value='3'>dokter</option>
+                                                <option value='4'>kasir</option>
                                             </select>
                                         </div>
                                         <div class="form-group">

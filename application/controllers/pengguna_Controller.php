@@ -43,12 +43,10 @@ class pengguna_Controller extends CI_Controller {
 		}
 			
 		public function tambah_akun(){
-			$this->load->model('level_Model');
-			$data['lvl'] = $this->level_Model->viewLevel(); 
 			$this->load->view('apps/header');
 			$this->load->view('apps/admin');
 			$this->load->view('apps/sidebar');
-			$this->load->view('main/tambah_pengguna', $data);
+			$this->load->view('main/tambah_pengguna');
 			$this->load->view('apps/footer');
 		}
 

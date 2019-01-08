@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2019 at 03:49 PM
+-- Generation Time: Jan 08, 2019 at 06:39 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -51,6 +51,53 @@ CREATE TABLE `gejala` (
   `id_gejala` int(11) NOT NULL,
   `gejala` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gejala`
+--
+
+INSERT INTO `gejala` (`id_gejala`, `gejala`) VALUES
+(1, 'nyeri perut'),
+(2, 'mual, dan muntah'),
+(3, 'cedera kepala'),
+(4, 'batuk berdahak'),
+(5, 'demam'),
+(6, 'menggigil'),
+(7, 'kehamilan'),
+(8, 'kesulitan bernapas'),
+(9, 'cedera tangan /kaki'),
+(10, 'cedera tulang belakang'),
+(11, 'keluarnya cairan berdarah dari puting'),
+(12, 'kehamilan'),
+(13, 'kulit atau mata menguning'),
+(14, 'mual'),
+(15, 'sakit perut'),
+(16, 'kelelahan'),
+(17, 'perut buncit'),
+(18, 'kehilangan selera makan'),
+(19, 'ketidakseimbangan air-elektrolit'),
+(20, 'tekanan darah tinggi'),
+(21, 'kencing manis'),
+(22, 'selalu dehidrasi'),
+(23, 'kulit pucat'),
+(24, 'sesak napas'),
+(25, 'pusing'),
+(26, 'detak jantung cepat'),
+(27, 'keringat berlebih'),
+(28, 'sensitif terhadap panas atau merasa dingin'),
+(29, 'alergi'),
+(30, 'alergi pada ternggorokan'),
+(31, 'benjolan yang tidak normal'),
+(32, 'kesulitan buang air kecil'),
+(33, 'nafsu makan menurun'),
+(34, 'sakit perut bagian kanan bawah'),
+(35, 'ketidaknyamanan saat buang air besar atau ketika duduk'),
+(36, 'sakit perut bagian kanan atas atau punggung'),
+(37, 'sakit tenggorokan'),
+(38, 'sulit menelan'),
+(39, 'cedera hidung'),
+(40, 'Gangguan pendengaran'),
+(41, 'telinga terasa sakit atau nyeri');
 
 -- --------------------------------------------------------
 
@@ -361,7 +408,12 @@ CREATE TABLE `poli` (
 --
 
 INSERT INTO `poli` (`id_poli`, `nama_poli`) VALUES
-(1, 'Poli Umum');
+(1, 'Poli Umum'),
+(2, 'Poli Penyakit Dalam'),
+(3, 'Poli THT'),
+(4, 'Poli Saraf'),
+(5, 'Poli Bedah'),
+(6, 'Poli Kebidanan');
 
 -- --------------------------------------------------------
 
@@ -490,7 +542,7 @@ ALTER TABLE `dokter`
 -- AUTO_INCREMENT for table `gejala`
 --
 ALTER TABLE `gejala`
-  MODIFY `id_gejala` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_gejala` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `kasir`
@@ -514,7 +566,7 @@ ALTER TABLE `pegawai`
 -- AUTO_INCREMENT for table `poli`
 --
 ALTER TABLE `poli`
-  MODIFY `id_poli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_poli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `user`

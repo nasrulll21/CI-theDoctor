@@ -79,28 +79,11 @@
                                             <!--/span-->
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label">Username</label>
-                                                    <input type="text" id="username" class="form-control form-control-danger" placeholder="username" name="username" required></div>
-                                            </div>
-                                            <!--/span-->
-                                        </div>
-                                        <!--/row-->
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">Password</label>
-                                                    <input type="password" id="Password" class="form-control form-control-danger" placeholder="Password" required name="pass"
-                                                    name="pass">
-                                                </div>
-                                            </div>
-                                            <!--/span-->
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">Jenis Kelamin</label>
-                                                    <select class="form-control custom-select" required name="jk">
-                                                        <option value="pria">Pria</option>
-                                                        <option value="wanita">Wanita</option>
-                                                    </select>
+                                                        <label class="control-label">Jenis Kelamin</label>
+                                                        <select class="form-control custom-select" required name="jk">
+                                                            <option value="pria">Pria</option>
+                                                            <option value="wanita">Wanita</option>
+                                                        </select>
                                                 </div>
                                             </div>
                                             <!--/span-->
@@ -136,7 +119,7 @@
                                             <!--/span-->
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label">Nama Orang Tua</label>
+                                                    <label class="control-label">Nama Orang Tua/Wali</label>
                                                     <input type="text" id="username" class="form-control form-control-danger" placeholder="Orang Tua" name="nama_ortu"></div>
                                             </div>
                                             <!--/span-->
@@ -167,8 +150,8 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label">Nama Orang Tua</label>
-                                                    <input type="text" id="username" class="form-control form-control-danger" placeholder="Orang Tua" name="nama_ortu">
+                                                    <label class="control-label">No. KTP</label>
+                                                    <input type="text" id="username" class="form-control form-control-danger" placeholder="KTP" name="ktp">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -180,7 +163,13 @@
                                             <!--/span-->
                                         </div>
                                         <div class="row">
-                                            
+                                            <div class="col-md-6">
+                                                    <!-- <div class="form-group">
+                                                        <label class="control-label">Telepon</label>
+                                                        <input type="text" id="tlp" class="form-control form-control-danger" placeholder="Telepon" name="telp">
+                                                    </div> -->
+                                            </div>
+                                            <!--/span-->
                                         </div>
                                         <!--/row-->
                                         <h3 class="box-title m-t-40">Address</h3>

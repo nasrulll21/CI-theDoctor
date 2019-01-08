@@ -27,10 +27,10 @@
                             Admin/pengguna/perawat
                             Admin/pengguna/kasir  -->
 
-                                <li> <a href="<?=base_url('pengguna_Controller/tambah_akun');?>"><span class="hide-menu"><i class="fa fa-user-plus"></i> Tambah Pengguna</span></a></li>
-                                <li> <a href="<?=base_url('pengguna_Controller/admin');?>"><span class="hide-menu"><i class="fa fa-user-secret"></i> Admin</span></a></li>
-                                <li> <a href="<?=base_url('pengguna_Controller/pasien');?>"><span class="hide-menu"><i class="fa fa-user"></i> Pasien</span></a></li>
-                                <li> <a href="<?=base_url('pengguna_Controller/perawat');?>"><span class="hide-menu"><i class="fa fa-user-md"></i> Perawat</span></a></li>
+                                <li> <a href="<?=base_url('pengguna_Controller/tambah_akun');?>"><span class="hide-menu"><i class="fa fa-user-plus"></i> Tambah pegawai</span></a></li>
+                                <li> <a href="<?=base_url('pengguna_Controller/direktur');?>"><span class="hide-menu"><i class="fa fa-user-secret"></i> Direktur</span></a></li>
+                                <li> <a href="<?=base_url('pengguna_Controller/plyanan');?>"><span class="hide-menu"><i class="fa fa-user"></i> Pelayanan</span></a></li>
+                                <li> <a href="<?=base_url('pengguna_Controller/dokter');?>"><span class="hide-menu"><i class="fa fa-user-md"></i> Dokter</span></a></li>
                                 <li> <a href="<?=base_url('pengguna_Controller/kasir');?>"><span class="hide-menu"><i class="fa fa-money"></i> Kasir</span></a></li>
                             </ul>
                         </li>

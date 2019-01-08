@@ -24,14 +24,18 @@
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-hover ">
+                                <table class="table table-hover ">
                                         <thead>
                                             <tr>
                                                 <th>no.</th>
                                                 <th>Nama</th>
                                                 <th>Username</th>
-                                                <th width="220px">Password</th>
-                                                <th width="160px">Action</th>
+                                                <th>Password</th>
+                                                <th>Jenis Kelamin</th>
+                                                <th>Alamat</th>
+                                                <th>Tanggal Lahir</th>
+                                                <th>No. HP</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -40,13 +44,16 @@
                                             foreach($user as $us) : $no++?>
                                             <tr>
                                                 <th scope="row"><?php echo $no ?></th>
-                                                <td><?php echo $us->nama_lengkap ?></td>
-                                                <td><?php echo $us->username ?></td>
-                                                <td><?php echo $us->pass ?></td>
+                                                <td><?php echo $us->Nama ?></td>
+                                                <td><?php echo $us->Username ?></td>
+                                                <td><?php echo $us->Password ?></td>
+                                                <td><?php echo $us->Jk ?></td>
+                                                <td><?php echo $us->Alamat ?></td>
+                                                <td><?php echo $us->tgl ?></td>
+                                                <td><?php echo $us->no_hp ?></td>
                                                 <td> 
-                                                    <a href="<?=base_url('pengguna_Controller/view_akun/').$us->username?>" class='btn btn-info btn-flat m-b-10 m-l-5'><i class='fa fa-search-plus'></i></a>
-                                                    <a href="<?=base_url('pengguna_Controller/edit_akun/').$us->username?>" class='btn btn-warning btn-flat m-b-10 m-l-5'><i class='fa fa-edit'></i></a>
-                                                    <a href="<?=base_url('pengguna_Controller/delete_akun/').$us->username?>" class='btn btn-danger btn-flat m-b-10 m-l-5'><i class='fa fa-close'></i></a>
+                                                    <a href="<?=base_url('pengguna_Controller/edit_akun/').$us->Username?>" class='btn btn-warning btn-flat m-b-10 m-l-5'><i class='fa fa-edit'></i></a>
+                                                    <a href="<?=base_url('pengguna_Controller/delete_akun/').$us->Username?>" class='btn btn-danger btn-flat m-b-10 m-l-5'><i class='fa fa-close'></i></a>
                                                 </td>
                                             </tr>
                                             <?php endforeach ?>

@@ -6,8 +6,8 @@ class pengguna_Controller extends CI_Controller {
 			$this->load->helper('url_helper');
     }
 
-    public function pasien(){
-			$data['user'] = $this->userModel->get_pasien();
+    public function dokter(){
+			$data['user'] = $this->userModel->get_dokter();
 			$this->load->view('apps/header');
 			$this->load->view('apps/admin');
 			$this->load->view('apps/sidebar');
@@ -15,8 +15,8 @@ class pengguna_Controller extends CI_Controller {
 			$this->load->view('apps/footer');
 	}
 	
-	public function admin(){
-		$data['user'] = $this->userModel->get_admin();
+	public function direktur(){
+		$data['user'] = $this->userModel->get_direktur();
 		$this->load->view('apps/header');
 		$this->load->view('apps/admin');
 		$this->load->view('apps/sidebar');
@@ -25,14 +25,23 @@ class pengguna_Controller extends CI_Controller {
 }
 
     public function kasir(){
-			$data['user'] = $this->userModel->get_kasir();
-			$this->load->view('apps/header');
-			$this->load->view('apps/admin');
-			$this->load->view('apps/sidebar');
-			$this->load->view('main/table-akun-kasir', $data);
-			$this->load->view('apps/footer');
+		$data['user'] = $this->userModel->get_kasir();
+		$this->load->view('apps/header');
+		$this->load->view('apps/admin');
+		$this->load->view('apps/sidebar');
+		$this->load->view('main/table-akun-kasir', $data);
+		$this->load->view('apps/footer');
 		}
-		
+
+	public function plyanan(){
+		$data['user'] = $this->userModel->get_plynan();
+		$this->load->view('apps/header');
+		$this->load->view('apps/admin');
+		$this->load->view('apps/sidebar');
+		$this->load->view('main/table-akun-kasir', $data);
+		$this->load->view('apps/footer');
+		}
+			
 		public function tambah_akun(){
 			$this->load->model('level_Model');
 			$data['lvl'] = $this->level_Model->viewLevel(); 
@@ -44,7 +53,7 @@ class pengguna_Controller extends CI_Controller {
 		}
 
 		public function tambah_pasien(){
-			$this->load->view('main/Registration.php');
+			$this->load->view('main/Registration');
 		}
 
 		public function view_user(){
@@ -53,12 +62,12 @@ class pengguna_Controller extends CI_Controller {
 	
 		public function act_addAkun(){
 			$this->userModel->add_akun();
-			redirect('Admin', 'refresh');
+			redirect('main/Registration', 'refresh');
 		}
 
 		public function act_addPasien(){
 			$we = $this->userModel->add_pasien();
-			redirect('auth', 'refresh');
+			redirect('pengguna_Controller/tambah_pasien', 'refresh');
 		}
 
 		

@@ -8,16 +8,15 @@
                         <li class="nav-devider"></li>
                         <li> <a href="<?=base_url('Admin');?>" ><i class="fa fa-tachometer"></i>Dashboard</a>
                         </li>
-                        <li class="nav-label">Data Tabel</li>
-                        <li><a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-bar-chart"></i><span class="hide-menu">Pemeriksaan</span></a>
+                        <li class="nav-label">Data Tabel Master</li>
+                        <li><a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-bar-chart"></i><span class="hide-menu">Cek Pasien</span></a>
                             <ul aria-expanded="false" class="collapse">
                             <!-- Admin/periksa/laboratorium
                                  Admin/periksa/radiologi
                                  Admin/periksa/operasi  -->
 
-                                <li> <a href="<?=base_url('Admin/laboratorium');?>"><i class="fa fa-envelope"></i><span class="hide-menu"> Laboratorium</span></a></li>
-                                <li> <a href="<?=base_url('Admin/radiologi');?>"><i class="fa fa-envelope"></i><span class="hide-menu"> Radiologi</span></a></li>
-                                <li> <a href="<?=base_url('Admin/operasi');?>" ><i class="fa fa-envelope"></i><span class="hide-menu"> Operasi</span></a></li>
+                                <li> <a href="<?=base_url('pemeriksaan_controller/data_pasien');?>"><i class="fa fa-envelope"></i><span class="hide-menu"> Data Pasien</span></a></li>
+                                <li> <a href="<?=base_url('pemeriksaan_controller/diagnosa');?>"><i class="fa fa-envelope"></i><span class="hide-menu"> Periksa</span></a></li>
                             </ul>
                         </li>
                     
@@ -27,21 +26,17 @@
                             Admin/pengguna/perawat
                             Admin/pengguna/kasir  -->
 
-                                <li> <a href="<?=base_url('pengguna_Controller/tambah_akun');?>"><span class="hide-menu"><i class="fa fa-user-plus"></i> Tambah Pengguna</span></a></li>
-                                <li> <a href="<?=base_url('pengguna_Controller/admin');?>"><span class="hide-menu"><i class="fa fa-user-secret"></i> Admin</span></a></li>
-                                <li> <a href="<?=base_url('pengguna_Controller/pasien');?>"><span class="hide-menu"><i class="fa fa-user"></i> Pasien</span></a></li>
-                                <li> <a href="<?=base_url('pengguna_Controller/perawat');?>"><span class="hide-menu"><i class="fa fa-user-md"></i> Perawat</span></a></li>
+                                <li> <a href="<?=base_url('pengguna_Controller/tambah_akun');?>"><span class="hide-menu"><i class="fa fa-user-plus"></i> Tambah pegawai</span></a></li>
+                                <li> <a href="<?=base_url('pengguna_Controller/direktur');?>"><span class="hide-menu"><i class="fa fa-user-secret"></i> Direktur</span></a></li>
+                                <li> <a href="<?=base_url('pengguna_Controller/plyanan');?>"><span class="hide-menu"><i class="fa fa-user"></i> Pelayanan</span></a></li>
+                                <li> <a href="<?=base_url('pengguna_Controller/dokter');?>"><span class="hide-menu"><i class="fa fa-user-md"></i> Dokter</span></a></li>
                                 <li> <a href="<?=base_url('pengguna_Controller/kasir');?>"><span class="hide-menu"><i class="fa fa-money"></i> Kasir</span></a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-suitcase"></i><span class="hide-menu">Data Obat<span class="label label-rouded label-warning pull-right">6</span></span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-suitcase"></i><span class="hide-menu">Data Obat</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="ui-alert.html">Alert</a></li>
-                                <li><a href="ui-button.html">Button</a></li>
-                                <li><a href="ui-dropdown.html">Dropdown</a></li>
-                                <li><a href="ui-progressbar.html">Progressbar</a></li>
-                                <li><a href="ui-tab.html">Tab</a></li>
-                                <li><a href="ui-typography.html">Typography</a></li>
+                                <li><a href="<?=base_url('obat_controller/tambah');?>"><i class="fa fa-plus"></i> Tambah Obat</a></li>
+                                <li><a href="<?=base_url('obat_controller/view_Obat');?>"><i class="fa fa-medkit"></i> Obat</a></li>
                             </ul>
                         </li>
                         <!-- <li class="nav-label">Features</li>

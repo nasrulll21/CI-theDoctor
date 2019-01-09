@@ -6,7 +6,7 @@ class pemeriksaan_controller extends CI_Controller {
 		$this->load->helper('url_helper');
     }
 
-    public function index(){
+    public function diagnosa(){
         $data['gejala'] = $this->keluhan_model->getGejala();
         $this->load->view('main/dokter/apps/header');
         $this->load->view('main/dokter/apps/admin');

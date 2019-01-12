@@ -69,7 +69,15 @@
                                 <form  action="<?=base_url('pengguna_Controller/act_addPasien');?>" method="post">
                                     <div class="form-body">
                                         <h3 class="card-title m-t-15">Biodata</h3>
+                                        <div data-flashdata="<?= $this->session->flashdata('flash')?>"></div>
                                         <hr>
+                                        <div class="row-p-t-20">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Kode Pasien</label>
+                                                    <input type="text" id="nama" class="form-control" readonly name="idd" value="<?='PSN-'.random_string('alnum', 8)?>"></div>
+                                            </div>
+                                        </div>
                                         <div class="row p-t-20">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -114,7 +122,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label">Umur</label>
-                                                    <input type="text" id="umur" class="form-control form-control-danger" placeholder="umur" name="umur"></div>
+                                                    <input type="number" id="umur" class="form-control form-control-danger" placeholder="umur" name="umur"></div>
                                             </div>
                                             <!--/span-->
                                             <div class="col-md-6">
@@ -151,13 +159,13 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label">No. KTP</label>
-                                                    <input type="text" id="username" class="form-control form-control-danger" placeholder="KTP" name="ktp">
+                                                    <input type="number" id="username" class="form-control form-control-danger" placeholder="KTP" name="ktp">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="control-label">Telepon</label>
-                                                        <input type="text" id="tlp" class="form-control form-control-danger" placeholder="Telepon" name="telp">
+                                                        <input type="number" id="tlp" class="form-control form-control-danger" placeholder="Telepon" name="telp">
                                                     </div>
                                             </div>
                                             <!--/span-->
@@ -186,7 +194,7 @@
                                         <!--/row-->
                                     </div>
                                     <div class="form-actions">
-                                        <button type="submit" class="btn btn-success" name="btn"> <i class="fa fa-check"></i> Save</button>
+                                        <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
                                         <button type="button" class="btn btn-inverse">Cancel</button>
                                     </div>
                                 </form>

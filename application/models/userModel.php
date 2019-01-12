@@ -71,7 +71,7 @@ class userModel extends CI_Model{
 
     public function add_pasien(){
         $data= array(
-            'kd_pasien' => 'PSN-'.random_string('alnum', 8),
+            'kd_pasien' => $this->input->post('idd'),
             'nama_lengkap' => $this->input->post('nama'),
             'jk' => $this->input->post('jk'),
             'tgl_lahir' => $this->input->post('tgl'),

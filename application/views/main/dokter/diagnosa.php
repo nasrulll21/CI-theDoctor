@@ -20,12 +20,15 @@
                         <div class="card">
                             <h4><div class="card-body"> Pemeriksaan</div></h4>
                             <br>
+                            <form  action="<?=base_url('pemeriksaan_controller/add');?>" method="post">
                             <div class="row">
-                                <div class="col-5">
-                                    <input type="text" class="form-control input-default " placeholder="Kode Pasien">
-                                </div>
-                                <div>
-                                    <button type="submit" class="btn btn-info"><span class="fa fa-search"></span></button>
+                                <div class="col-4">
+                                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1"required name="agama">
+                                    <option>-- pilih pasien --</option>
+                                    <?php foreach($pasien as $psn) :?>
+                                        <option value="<?=$psn->kd_pasien?>"><?php echo $psn->kd_pasien." - ".$psn->nama_lengkap ?></option>
+                                    <?php endforeach ?>
+                                    </select>
                                 </div>
                             </div>
                             <br>    
@@ -34,7 +37,6 @@
                                 <h5>Keluhan : </h5>
                             </div>
                             <br>
-                            
                             <?php $i=0; foreach($gejala as $gjl) : ?>
                                 <div class="row">
                                     <div class="col-2"><?php echo $gjl->gejala ?></div>
@@ -50,6 +52,7 @@
                             <div>
                                 <button type="submit" class="btn btn-success"><span class="fa fa-check"></span> Cek</button>
                             </div>
+                            </form>
                         </div>
                     </div>
                     

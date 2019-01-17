@@ -49,7 +49,7 @@ class pengguna_Controller extends CI_Controller {
 			$this->load->view('main/tambah_pengguna');
 			$this->load->view('apps/footer');
 		}
-
+		
 		public function tambah_pasien(){
 			$this->load->view('main/Registration');
 		}

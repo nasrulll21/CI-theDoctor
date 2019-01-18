@@ -25,7 +25,7 @@ class kasir_Controller extends CI_Controller {
 	}
 	public function data_pasien(){
 		$this->load->model('pelayanan_model');
-        $data['pasien'] = $this->pelayanan_model->getpasien();
+        $data['pasien'] = $this->pelayanan_model->getPasien();
 		$this->load->view('main/kasir/apps/header');
 		$this->load->view('main/kasir/apps/header');
 		$this->load->view('main/kasir/apps/admin');

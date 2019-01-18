@@ -13,6 +13,31 @@ class direktur_controller extends CI_Controller {
 		$this->load->view('main/direktur/apps/sidebar');
 		$this->load->view('main/direktur/app-profile');
 		$this->load->view('main/direktur/apps/footer');
+	}
+	
+
+	public function data_pegawai(){
+		$this->load->model('pelayanan_model');
+        $data['pasien'] = $this->pelayanan_model->getPegawai();
+		$this->load->view('main/direktur/apps/header');
+		$this->load->view('main/direktur/apps/header');
+		$this->load->view('main/direktur/apps/admin');
+		$this->load->view('main/direktur/apps/sidebar');
+		$this->load->view('main/table-data-pegawai', $data);
+		$this->load->view('main/direktur/apps/footer');
+    }
+
+
+
+	public function data_pasien(){
+		$this->load->model('pelayanan_model');
+        $data['pasien'] = $this->pelayanan_model->getPasien();
+		$this->load->view('main/direktur/apps/header');
+		$this->load->view('main/direktur/apps/header');
+		$this->load->view('main/direktur/apps/admin');
+		$this->load->view('main/direktur/apps/sidebar');
+		$this->load->view('main/table-data-pasien', $data);
+		$this->load->view('main/direktur/apps/footer');
     }
     
 }   

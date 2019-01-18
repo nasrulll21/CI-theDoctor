@@ -35,7 +35,7 @@ class pemeriksaan_controller extends CI_Controller {
         $result = $this->db->query("select * from cek");
         
         if ('id_gejala'.$i==1 && 'status'.$i==1) {
-          
+          $this->db->("select * from pasien_poli ")
         }
     }
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2019 at 06:39 PM
+-- Generation Time: Jan 18, 2019 at 06:58 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -21,6 +21,66 @@ SET time_zone = "+00:00";
 --
 -- Database: `rs`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cek`
+--
+
+CREATE TABLE `cek` (
+  `id` int(11) NOT NULL,
+  `kd_pasien` varchar(12) NOT NULL,
+  `id_gejala` int(11) NOT NULL,
+  `status` enum('1','0') DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cek`
+--
+
+INSERT INTO `cek` (`id`, `kd_pasien`, `id_gejala`, `status`) VALUES
+(11, 'PSN-IZlx1d7Q', 1, '1'),
+(12, 'PSN-IZlx1d7Q', 2, '1'),
+(13, 'PSN-IZlx1d7Q', 3, NULL),
+(14, 'PSN-IZlx1d7Q', 4, NULL),
+(15, 'PSN-IZlx1d7Q', 5, NULL),
+(16, 'PSN-IZlx1d7Q', 6, NULL),
+(17, 'PSN-IZlx1d7Q', 7, NULL),
+(18, 'PSN-IZlx1d7Q', 8, NULL),
+(19, 'PSN-IZlx1d7Q', 9, NULL),
+(20, 'PSN-IZlx1d7Q', 10, '1'),
+(21, 'PSN-IZlx1d7Q', 11, '1'),
+(22, 'PSN-IZlx1d7Q', 12, NULL),
+(23, 'PSN-IZlx1d7Q', 13, NULL),
+(24, 'PSN-IZlx1d7Q', 14, NULL),
+(25, 'PSN-IZlx1d7Q', 15, NULL),
+(26, 'PSN-IZlx1d7Q', 16, NULL),
+(27, 'PSN-IZlx1d7Q', 17, NULL),
+(28, 'PSN-IZlx1d7Q', 18, NULL),
+(29, 'PSN-IZlx1d7Q', 19, NULL),
+(30, 'PSN-IZlx1d7Q', 20, NULL),
+(31, 'PSN-IZlx1d7Q', 21, NULL),
+(32, 'PSN-IZlx1d7Q', 22, NULL),
+(33, 'PSN-IZlx1d7Q', 23, NULL),
+(34, 'PSN-IZlx1d7Q', 24, NULL),
+(35, 'PSN-IZlx1d7Q', 25, NULL),
+(36, 'PSN-IZlx1d7Q', 26, NULL),
+(37, 'PSN-IZlx1d7Q', 27, NULL),
+(38, 'PSN-IZlx1d7Q', 28, NULL),
+(39, 'PSN-IZlx1d7Q', 29, NULL),
+(40, 'PSN-IZlx1d7Q', 30, NULL),
+(41, 'PSN-IZlx1d7Q', 31, NULL),
+(42, 'PSN-IZlx1d7Q', 32, NULL),
+(43, 'PSN-IZlx1d7Q', 33, NULL),
+(44, 'PSN-IZlx1d7Q', 34, NULL),
+(45, 'PSN-IZlx1d7Q', 35, NULL),
+(46, 'PSN-IZlx1d7Q', 36, NULL),
+(47, 'PSN-IZlx1d7Q', 37, NULL),
+(48, 'PSN-IZlx1d7Q', 38, NULL),
+(49, 'PSN-IZlx1d7Q', 39, NULL),
+(50, 'PSN-IZlx1d7Q', 40, NULL),
+(51, 'PSN-IZlx1d7Q', 41, NULL);
 
 -- --------------------------------------------------------
 
@@ -209,6 +269,18 @@ CREATE TABLE `pasien` (
 INSERT INTO `pasien` (`kd_pasien`, `nama_lengkap`, `jk`, `tgl_lahir`, `agama`, `umur`, `nama_ortu`, `gol_darah`, `bpjs`, `ktp`, `telepon`, `alamat`) VALUES
 ('PSN-IZlx1d7Q', 'Aslan', 'pria', '1997-07-16', 'islam', 21, 'BPK', 'AB', '1', '0981029321923', '085234898323', 'ksjdhaskjdhaksjdhakjsdh'),
 ('PSN-na6yCz8i', 'imran Nur', 'pria', '2013-01-17', 'islam', 12, 'barulla', 'B', '0', '98203982', '093387', 'batua');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pasien_poli`
+--
+
+CREATE TABLE `pasien_poli` (
+  `id` int(11) NOT NULL,
+  `kd_pasien` varchar(12) NOT NULL,
+  `id_poli` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -462,6 +534,14 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 
 --
+-- Indexes for table `cek`
+--
+ALTER TABLE `cek`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `kd_pasien` (`kd_pasien`),
+  ADD KEY `id_gejala` (`id_gejala`);
+
+--
 -- Indexes for table `dokter`
 --
 ALTER TABLE `dokter`
@@ -504,6 +584,14 @@ ALTER TABLE `pasien`
   ADD PRIMARY KEY (`kd_pasien`);
 
 --
+-- Indexes for table `pasien_poli`
+--
+ALTER TABLE `pasien_poli`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `kd_pasien` (`kd_pasien`),
+  ADD KEY `id_poli` (`id_poli`);
+
+--
 -- Indexes for table `pegawai`
 --
 ALTER TABLE `pegawai`
@@ -533,6 +621,12 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `cek`
+--
+ALTER TABLE `cek`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+
+--
 -- AUTO_INCREMENT for table `dokter`
 --
 ALTER TABLE `dokter`
@@ -557,6 +651,12 @@ ALTER TABLE `keluhan`
   MODIFY `id_kel` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `pasien_poli`
+--
+ALTER TABLE `pasien_poli`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `pegawai`
 --
 ALTER TABLE `pegawai`
@@ -566,7 +666,7 @@ ALTER TABLE `pegawai`
 -- AUTO_INCREMENT for table `poli`
 --
 ALTER TABLE `poli`
-  MODIFY `id_poli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_poli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -577,6 +677,13 @@ ALTER TABLE `user`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `cek`
+--
+ALTER TABLE `cek`
+  ADD CONSTRAINT `cek_ibfk_1` FOREIGN KEY (`kd_pasien`) REFERENCES `pasien` (`kd_pasien`),
+  ADD CONSTRAINT `cek_ibfk_2` FOREIGN KEY (`id_gejala`) REFERENCES `gejala` (`id_gejala`);
 
 --
 -- Constraints for table `dokter`
@@ -599,6 +706,13 @@ ALTER TABLE `kasir`
 --
 ALTER TABLE `keluhan`
   ADD CONSTRAINT `keluhan_ibfk_1` FOREIGN KEY (`kd_pasien`) REFERENCES `pasien` (`kd_pasien`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `pasien_poli`
+--
+ALTER TABLE `pasien_poli`
+  ADD CONSTRAINT `pasien_poli_ibfk_1` FOREIGN KEY (`kd_pasien`) REFERENCES `pasien` (`kd_pasien`),
+  ADD CONSTRAINT `pasien_poli_ibfk_2` FOREIGN KEY (`id_poli`) REFERENCES `poli` (`id_poli`);
 
 --
 -- Constraints for table `user`

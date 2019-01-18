@@ -6,7 +6,7 @@ class userModel extends CI_Model{
         $this->load->helper('string');
     }
 
-    public function get_all(){
+    public function get_pasien(){
         $query = $this->db->get("pasien");
         return $query->result();
     }

@@ -4,7 +4,7 @@ class pengguna_Controller extends CI_Controller {
 			parent::__construct();
 			$this->load->model('userModel');
 			$this->load->helper('url_helper');
-    }
+	}
 
     public function dokter(){
 			$data['user'] = $this->userModel->get_dokter();

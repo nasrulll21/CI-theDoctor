@@ -23,14 +23,14 @@
                             <form  action="<?=base_url('pemeriksaan_controller/add');?>" method="post">
                             <div class="row">
                                 <div class="col-4">
-                                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1"required name="agama">
+                                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1"required name="kd">
                                     <option>-- pilih pasien --</option>
                                     <?php foreach($pasien as $psn) :?>
                                         <option value="<?=$psn->kd_pasien?>"><?php echo $psn->kd_pasien." - ".$psn->nama_lengkap ?></option>
                                     <?php endforeach ?>
                                     </select>
                                 </div>
-                            </div>
+                            </div>      
                             <br>    
                             <hr>
                             <div class="col-12">
@@ -41,13 +41,14 @@
                                 <div class="row">
                                     <div class="col-2"><?php echo $gjl->gejala ?></div>
                                     <div class="col-1">
-                                        | <input type="radio" class="input-default" name="gejala<?=$i?>" value="<?php echo $gjl->id_gejala?>"> Ya
+                                    <input type="hidden" name="gejala<?=$i?>" value="<?php echo $gjl->id_gejala?>">
+                                        <input type="radio" class="input-default" name="sts<?=$i?>" value="1"> Ya
                                     </div>
                                     <div class="col-2">
-                                        <input type="radio" class="input-default" name="gejala<?=$i?>"> Tidak
+                                        <input type="radio" class="input-default" name="sts<?=$i?>" value="0"> Tidak
                                     </div>
                                 </div> <br>
-                            <?php $i++; endforeach    ?>
+                            <?php $i++; endforeach  ?>
                             <br>
                             <div>
                                 <button type="submit" class="btn btn-success"><span class="fa fa-check"></span> Cek</button>

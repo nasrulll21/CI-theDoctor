@@ -27,9 +27,9 @@
                                         </div>
                                     </header>
 
-                                    <h3>Allison Walker</h3>
+                                    <h3><?php echo $this->session->userdata('username');?></h3>
                                     <div class="desc">
-                                        Hello Admin!
+                                        Hello <?php echo $this->session->userdata('username');?>
                                     </div>
                                     <div class="contacts text-center">
                                         <a href=""><i class="fa fa-edit"></i></a>

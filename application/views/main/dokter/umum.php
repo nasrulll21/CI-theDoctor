@@ -26,7 +26,7 @@
                                     <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1"required name="kd">
                                     <option>-- pilih pasien --</option>
                                     <?php foreach($pasien as $psn) :?>
-                                        <option value="<?=$psn->kd_pasien?>"><?php echo $psn->kd_pasien." - ".$psn->nama_lengkap ?></option>
+                                        <option value="<?=$psn->kd_pasien?>"><?php echo $psn->kd_pasien." - ".$psn->nama_lengkap; ?></option>
                                     <?php endforeach ?>
                                     </select>
                                 </div>

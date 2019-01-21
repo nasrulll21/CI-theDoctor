@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 21, 2019 at 04:08 PM
+-- Generation Time: Jan 21, 2019 at 08:11 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -411,16 +411,19 @@ CREATE TABLE `pasien` (
   `bpjs` enum('1','0') NOT NULL,
   `ktp` varchar(150) NOT NULL DEFAULT '0',
   `telepon` varchar(15) NOT NULL,
-  `alamat` varchar(255) NOT NULL
+  `id_poli` int(11) DEFAULT NULL,
+  `alamat` varchar(255) NOT NULL,
+  `tgl_regis` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pasien`
 --
 
-INSERT INTO `pasien` (`kd_pasien`, `nama_lengkap`, `jk`, `tgl_lahir`, `agama`, `umur`, `nama_ortu`, `gol_darah`, `bpjs`, `ktp`, `telepon`, `alamat`) VALUES
-('PSN-IZlx1d7Q', 'Aslan', 'pria', '1997-07-16', 'islam', 21, 'BPK', 'AB', '1', '0981029321923', '085234898323', 'ksjdhaskjdhaksjdhakjsdh'),
-('PSN-na6yCz8i', 'imran Nur', 'pria', '2013-01-17', 'islam', 12, 'barulla', 'B', '0', '98203982', '093387', 'batua');
+INSERT INTO `pasien` (`kd_pasien`, `nama_lengkap`, `jk`, `tgl_lahir`, `agama`, `umur`, `nama_ortu`, `gol_darah`, `bpjs`, `ktp`, `telepon`, `id_poli`, `alamat`, `tgl_regis`) VALUES
+('PSN-F4hQm6p8', 'wsdfwe', 'pria', '2019-01-02', 'islam', 12, '', 'A', '1', '234324', '12432432', 1, 'sgrg', '2019-01-21 18:34:31'),
+('PSN-IZlx1d7Q', 'Aslan', 'pria', '1997-07-16', 'islam', 21, 'BPK', 'AB', '1', '0981029321923', '085234898323', 2, 'ksjdhaskjdhaksjdhakjsdh', '0000-00-00 00:00:00'),
+('PSN-na6yCz8i', 'imran Nur', 'pria', '2013-01-17', 'islam', 12, 'barulla', 'B', '0', '98203982', '093387', 4, 'batua', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -757,7 +760,8 @@ ALTER TABLE `obat`
 -- Indexes for table `pasien`
 --
 ALTER TABLE `pasien`
-  ADD PRIMARY KEY (`kd_pasien`);
+  ADD PRIMARY KEY (`kd_pasien`),
+  ADD KEY `id_poli` (`id_poli`);
 
 --
 -- Indexes for table `pasien_poli`
@@ -888,6 +892,12 @@ ALTER TABLE `kasir`
 --
 ALTER TABLE `keluhan`
   ADD CONSTRAINT `keluhan_ibfk_1` FOREIGN KEY (`kd_pasien`) REFERENCES `pasien` (`kd_pasien`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `pasien`
+--
+ALTER TABLE `pasien`
+  ADD CONSTRAINT `pasien_ibfk_1` FOREIGN KEY (`id_poli`) REFERENCES `poli` (`id_poli`);
 
 --
 -- Constraints for table `pasien_poli`

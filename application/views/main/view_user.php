@@ -56,8 +56,7 @@
 					        <li><a class="menu" href="#about">The Room</a></li>
 					        <li><a class="menu" href="#service">About Us</a></li>
 					        <li><a class="menu" href="#contact">contact us</a></li>
-					        <li><a class="menu" href="/Regis/Registration.php">Register<a</li>
-					        <li><a class="menu" href="/Login_v3/Login_v3/login.php">Login<a</li>
+					        <li><a class="menu" href="<?=base_url('auth')?>">Login<a</li>
 					      </ul>
 					    </div><!-- /navbar-collapse -->
 					  </div><!-- / .container-fluid -->
@@ -78,36 +77,24 @@
 						
 			            	<img src="<?=base_url('assets/img/slide-one.jpg');?>" alt="">
 			                <div class="carousel-caption">
-		               			<h1>Sign In</h1>
-		               			<p>check your health immediately</p>
-		               			<button> Register</button>
 			                </div>
 			            </div>
 			            <div class="item">
 						
 			            	<img src="<?=base_url('assets/img/slide-two.jpg');?>" alt="">
 			                <div class="carousel-caption">
-		               			<h1>Sign In</h1>
-		               			<p>check your health immediately</p>
-		               			<button>Register</button>
 			                </div>
 			            </div>
 			            <div class="item">
 						
 			            	<img src="<?=base_url('assets/img/slide-three.jpg');?>" alt="">
 			                <div class="carousel-caption">
-		               			<h1>Sign In</h1>
-		               			<p>check your health immediately</p>
-		               			<button>Register</button>
 			                </div>
 			            </div>
 			            <div class="item">
 						
 			            	<img src="<?=base_url('assets/img/slide-four.jpg');?>" alt="">
 			                <div class="carousel-caption">
-		               			<h1>Sign In</h1>
-		               			<p>check your health immediately</p>
-		               			<button>Register</button>
 			                </div>
 			            </div>
 			        </div>

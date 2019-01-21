@@ -52,6 +52,7 @@ class userModel extends CI_Model{
 	}
 
     public function add_akun(){
+        
         $data= array(
             'nama_lengkap' => $this->input->post('nama'),
             'jk' => $this->input->post('jk'),
@@ -63,13 +64,16 @@ class userModel extends CI_Model{
             'bpjs' => $this->input->post('bpjs'),
             'ktp' => $this->input->post('ktp'),
             'telepon' => $this->input->post('telp'),
-            'alamat' => $this->input->post('almt')
+            'id_poli' => $this->input->post('id_poli'),
+            'alamat' => $this->input->post('almt'),
+
         );
         $query = $this->db->insert('pasien', $data);
         return $query;
     }
 
     public function add_pasien(){
+        $date=(new DateTime('now'))->format('Y-m-d H:i:s');
         $data= array(
             'kd_pasien' => $this->input->post('idd'),
             'nama_lengkap' => $this->input->post('nama'),
@@ -82,7 +86,9 @@ class userModel extends CI_Model{
             'bpjs' => $this->input->post('bpjs'),
             'ktp' => $this->input->post('ktp'),
             'telepon' => $this->input->post('telp'),
-            'alamat' => $this->input->post('almt')
+            'id_poli' => $this->input->post('id_poli'),
+            'alamat' => $this->input->post('almt'),
+            'tgl_regis' =>$date
         );
         $query = $this->db->insert('pasien', $data);
         return $query;
@@ -101,6 +107,7 @@ class userModel extends CI_Model{
             'gol_darah' => $this->input->post('gol'),
             'bpjs' => $this->input->post('bpjs'),
             'telepon' => $this->input->post('telp'),
+            'id_poli' => $this->input->post('id_poli'),
             'alamat' => $this->input->post('almt'),
             'id_level' => $this->input->post('level')
         );
@@ -111,5 +118,9 @@ class userModel extends CI_Model{
     public function getUserById($id){
         $query = $this->db->get_where('user',$id);
         return $query;
+    }
+    public function get_pasienUmum($id=""){
+        $this->db->where('id_poli', $id);
+        $this->db->get('pasien')->result();
     }
 }

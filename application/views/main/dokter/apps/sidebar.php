@@ -9,34 +9,19 @@
                         <li> <a href="<?=base_url('Admin');?>" ><i class="fa fa-tachometer"></i>Dashboard</a>
                         </li>
                         <li class="nav-label">Data Tabel Master</li>
-                        <li><a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-bar-chart"></i><span class="hide-menu">Cek Pasien</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                            <!-- Admin/periksa/laboratorium
-                                 Admin/periksa/radiologi
-                                 Admin/periksa/operasi  -->
-
-                                <li> <a href="<?=base_url('pemeriksaan_controller/data_pasien');?>"><i class="fa fa-envelope"></i><span class="hide-menu"> Data Pasien</span></a></li>
-                                <li> <a href="<?=base_url('pemeriksaan_controller/diagnosa');?>"><i class="fa fa-envelope"></i><span class="hide-menu"> Periksa</span></a></li>
-                            </ul>
-                        </li>
                     
-                        <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Pengguna</span></a>
+                        <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">POLI</span></a>
                             <ul aria-expanded="false" class="collapse">
                             <!-- Admin/pengguna/pasien  
                             Admin/pengguna/perawat
                             Admin/pengguna/kasir  -->
 
-                                <li> <a href="<?=base_url('pengguna_Controller/tambah_akun');?>"><span class="hide-menu"><i class="fa fa-user-plus"></i> Tambah pegawai</span></a></li>
-                                <li> <a href="<?=base_url('pengguna_Controller/direktur');?>"><span class="hide-menu"><i class="fa fa-user-secret"></i> Direktur</span></a></li>
-                                <li> <a href="<?=base_url('pengguna_Controller/plyanan');?>"><span class="hide-menu"><i class="fa fa-user"></i> Pelayanan</span></a></li>
-                                <li> <a href="<?=base_url('pengguna_Controller/dokter');?>"><span class="hide-menu"><i class="fa fa-user-md"></i> Dokter</span></a></li>
-                                <li> <a href="<?=base_url('pengguna_Controller/kasir');?>"><span class="hide-menu"><i class="fa fa-money"></i> Kasir</span></a></li>
-                            </ul>
-                        </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-suitcase"></i><span class="hide-menu">Data Obat</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="<?=base_url('obat_controller/tambah');?>"><i class="fa fa-plus"></i> Tambah Obat</a></li>
-                                <li><a href="<?=base_url('obat_controller/view_Obat');?>"><i class="fa fa-medkit"></i> Obat</a></li>
+                                <li> <a href="<?=base_url('pengguna_Controller/tambah_akun');?>"><span class="hide-menu"><i class="fa fa-user"></i> Poli Umum</span></a></li>
+                                <li> <a href="<?=base_url('pengguna_Controller/direktur');?>"><span class="hide-menu"><i class="fa fa-user"></i> Poli Penyakit Dalam</span></a></li>
+                                <li> <a href="<?=base_url('pengguna_Controller/plyanan');?>"><span class="hide-menu"><i class="fa fa-user"></i> Poli THT</span></a></li>
+                                <li> <a href="<?=base_url('pengguna_Controller/dokter');?>"><span class="hide-menu"><i class="fa fa-user"></i> Poli Saraf</span></a></li>
+                                <li> <a href="<?=base_url('pengguna_Controller/kasir');?>"><span class="hide-menu"><i class="fa fa-user"></i> Poli Bedah</span></a></li>
+                                <li> <a href="<?=base_url('pengguna_Controller/kasir');?>"><span class="hide-menu"><i class="fa fa-user"></i> Poli Kebidanan</span></a></li>
                             </ul>
                         </li>
                         <!-- <li class="nav-label">Features</li>

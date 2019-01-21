@@ -172,10 +172,16 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                    <!-- <div class="form-group">
-                                                        <label class="control-label">Telepon</label>
-                                                        <input type="text" id="tlp" class="form-control form-control-danger" placeholder="Telepon" name="telp">
-                                                    </div> -->
+                                            <label class="control-label">POLI</label>
+                                                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1"required name="id_poli">
+                                                        <option value="1">Poli Umum</option>
+                                                        <option value="2">Poli Penyakit Dalam</option>
+                                                        <option value="3">Poli THT</option>
+                                                        <option value="4">Poli Saraf</option>
+                                                        <option value="5">Poli Bedah</option>
+                                                        <option value="6">Poli Kebidanan</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                             <!--/span-->
                                         </div>

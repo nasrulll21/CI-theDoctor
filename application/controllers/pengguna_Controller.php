@@ -67,6 +67,7 @@ class pengguna_Controller extends CI_Controller {
 			$we = $this->userModel->add_pasien();
 			redirect('pengguna_Controller/tambah_pasien', 'refresh');
 		}
+		
 
 		
     public function perawat(){

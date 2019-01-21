@@ -12,12 +12,10 @@ class pemeriksaan_controller extends CI_Controller {
     }
 
     public function index(){
-        $data['gejala'] = $this->keluhan_model->getGejala();
-        $data['pasien'] = $this->userModel->get_pasien();
         $this->load->view('main/dokter/apps/header');
         $this->load->view('main/dokter/apps/admin');
         $this->load->view('main/dokter/apps/sidebar');
-        $this->load->view('main/dokter/diagnosa', $data);
+        $this->load->view('main/dokter/app-profile');
         $this->load->view('main/dokter/apps/footer');
     }
     public function add(){

@@ -30,10 +30,20 @@ class pemeriksaan_controller extends CI_Controller {
         }
     }
 
+<<<<<<< HEAD
     public function diagnosa($id=''){
        $data['cek_diagnosa'] = $this->keluhan_model->getCekByid($id);
        foreach($cek_diagnosa as $cek){
            echo $cek->kd_pasien;
        }
+=======
+    public function poli(){
+        $i=0;
+        $result = $this->db->query("select * from cek");
+        
+        if ('id_gejala'.$i==1 && 'status'.$i==1) {
+          $this->db->("select * from pasien_poli ")
+        }
+>>>>>>> 70914871012a627c0e260c0d5364c1a398dafa41
     }
 }

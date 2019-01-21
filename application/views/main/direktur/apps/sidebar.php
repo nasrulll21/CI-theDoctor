@@ -9,7 +9,7 @@
                         <li> <a href="<?=base_url('Admin');?>" ><i class="fa fa-tachometer"></i>Dashboard</a>
                         </li>
                         <li><hr></li>   
-                        <li> <a href="<?=base_url('direktur_controller/data_pegawai');?>" ><i class="fa fa-money"></i>Data Pegawa</a>
+                        <li> <a href="<?=base_url('direktur_controller/data_pegawai');?>" ><i class="fa fa-money"></i>Data Pegawai</a>
                         </li>
                         <li> <a href="<?=base_url('direktur_controller/data_pasien');?>" ><i class="fa fa-user"></i>Data Pasien</a>
                         </li>

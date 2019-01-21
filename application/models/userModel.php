@@ -107,4 +107,9 @@ class userModel extends CI_Model{
         $this->db->where('username', $id);
         $query = $this->db->update('pasien', $data);
     }
+
+    public function getUserById($id){
+        $query = $this->db->get_where('user',$id);
+        return $query;
+    }
 }

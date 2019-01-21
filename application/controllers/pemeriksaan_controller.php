@@ -1,7 +1,10 @@
 <?php
 class pemeriksaan_controller extends CI_Controller {
 	public function __construct(){
-		parent::__construct();
+        parent::__construct();
+        if($this->session->userdata('username') == "" || $this->session->userdata('username') == NULL || $this->session->userdata('level') != 3){
+			redirect('auth');
+		}
         $this->load->model('keluhan_model');
         $this->load->model('Periksa_model');
 		$this->load->model('userModel');

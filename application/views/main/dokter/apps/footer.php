@@ -61,5 +61,4 @@
     <script src="<?=base_url('assets/js/lib/datatables/datatables-init.js');?>"></script>
 
 </body>
-
 </html>

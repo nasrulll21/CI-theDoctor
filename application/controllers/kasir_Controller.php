@@ -2,6 +2,7 @@
 class kasir_Controller extends CI_Controller {
 	public function __construct(){
 			parent::__construct();
+			$this->load->model('keluhan_model');
 			$this->load->model('userModel');
 			$this->load->helper('url_helper');
 	}
@@ -35,7 +36,7 @@ class kasir_Controller extends CI_Controller {
 	}
 	public function getTransaksiById() {
 		$idPasien = $this->input->post('idPasien');
-		$data['transaksi'] = $idPasien;
+		$data['transaksi'] = $this->keluhan_model->transaksi($id_pasien);
 		$this->load->view('main/kasir/data_transaksi',$data);
 	}
 }

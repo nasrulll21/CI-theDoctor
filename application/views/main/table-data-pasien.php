@@ -34,7 +34,6 @@
                                                 <th>tgl Lahir</th>
                                                 <th>Agama</th>
                                                 <th>Umur</th>
-                                                <th>action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -49,9 +48,6 @@
                                                 <td><?php echo $us->tgl_lahir ?></td>
                                                 <td><?php echo $us->agama ?></td>
                                                 <td><?php echo $us->umur ?></td>
-                                                <td> 
-                                                    <a href="<?=base_url('pelayanan_Controller/detail_akun/').$us->kd_pasien?>" class='btn btn-warning btn-flat m-b-10 m-l-5'><i class='fa fa-search'></i></a>
-                                                </td>
                                             </tr>
                                             <?php endforeach ?>
                                         </tbody>

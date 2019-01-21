@@ -18,7 +18,7 @@ class direktur_controller extends CI_Controller {
 
 	public function data_pegawai(){
 		$this->load->model('pelayanan_model');
-        $data['pasien'] = $this->pelayanan_model->getPegawai();
+        $data['user'] = $this->direktur_Model->get();
 		$this->load->view('main/direktur/apps/header');
 		$this->load->view('main/direktur/apps/header');
 		$this->load->view('main/direktur/apps/admin');

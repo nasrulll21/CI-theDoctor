@@ -2,7 +2,8 @@
 class pemeriksaan_controller extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
-		$this->load->model('keluhan_model');
+        $this->load->model('keluhan_model');
+        $this->load->model('Periksa_model');
 		$this->load->model('userModel');
 		$this->load->helper('url_helper');
     }
@@ -18,6 +19,7 @@ class pemeriksaan_controller extends CI_Controller {
     }
     public function add(){
         $i=0;
+        $this->load->model('Periksa_model');
         $result = $this->db->query("select * from gejala");
         foreach($result->result() as $row){
             $data=array(
@@ -28,22 +30,34 @@ class pemeriksaan_controller extends CI_Controller {
             $query = $this->db->insert('cek', $data);
             $i++;
         }
+        $data['hasilPemeriksaan'] = $this->keluhan_model->getCekById($this->input->post('kd'));
+        // $data['hasilPemeriksaan'] = $this->keluhan_model->getCekById($kode);
+        $data['pasien'] = $this->Periksa_model->getPasien($this->input->post('kd'));
+        $data['diagnosa'] = $this->Periksa_model->getDiagnosa();
+        $data['poli'] = $this->Periksa_model->getPoli();
+        $data['listDiagnosa'] = $this->Periksa_model->getViewDiagnos();
+        $this->load->view('main/dokter/apps/header');
+        $this->load->view('main/dokter/apps/admin');
+        $this->load->view('main/dokter/apps/sidebar');
+        $this->load->view('main/dokter/hasil_diagnosa', $data);
+        $this->load->view('main/dokter/apps/footer');
     }
 
-<<<<<<< HEAD
-    public function diagnosa($id=''){
+    public function regis(){
+        foreach ($this->input->post('regis') as $select) {   
+            $data = array(
+                'kd_pasien' => $this->input->post('kd'),
+                'id_periksa' => $select
+            );
+            $this->db->insert('kasir',$data);
+        }
+        redirect('kasir_controller/kasir');
+    }
+
+    public function diagnosa($id){
        $data['cek_diagnosa'] = $this->keluhan_model->getCekByid($id);
        foreach($cek_diagnosa as $cek){
            echo $cek->kd_pasien;
        }
-=======
-    public function poli(){
-        $i=0;
-        $result = $this->db->query("select * from cek");
-        
-        if ('id_gejala'.$i==1 && 'status'.$i==1) {
-          $this->db->("select * from pasien_poli ")
-        }
->>>>>>> 70914871012a627c0e260c0d5364c1a398dafa41
     }
 }

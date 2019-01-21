@@ -38,14 +38,30 @@
                                         <tbody>
                                             <?php 
                                             $no=0; 
-                                            foreach($pasien as $us) : $no++?>
+                                            foreach($user as $us) : $no++?>
                                             <tr>
                                                 <th scope="row"><?php echo $no ?></th>
-                                                <td><?php echo $us->id_pegawai ?></td>
-                                                <td><?php echo $us->nama ?></td>
-                                                <td><?php echo $us->jk ?></td>
-                                                <td><?php echo $us->tgl_lahir ?></td>
+                                                <td><?php echo $us->Nama ?></td>
+                                                <td><?php echo $us->Username ?></td>
+                                                <td><?php echo $us->Password ?></td>
+                                                <td><?php echo $us->Jk ?></td>
                                                 <td><?php echo $us->no_hp ?></td>
+                                                <td>
+                                                    <?php switch($us->level){
+                                                        case '0':
+                                                            echo "Admin";
+                                                            break;
+                                                        case '1':
+                                                            echo "Direktur";
+                                                            break;
+                                                        case '2':
+                                                            echo "Pegawai";
+                                                            break;
+                                                        case '3':
+                                                            echo "Dokter";
+                                                            break;
+                                                    }?>
+                                                </td>
                                                 
                                             </tr>
                                             <?php endforeach ?>

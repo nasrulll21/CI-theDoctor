@@ -14,19 +14,13 @@
                                                     <h2>Sub-total</h2>
                                                 </td>
                                             </tr>
-                                         <?php //foreach($transaksi as $dt) : ?>
+                                         <?php foreach($transaksi as $dt) : ?>
                                             <tr class="service">
                                                 <td class="tableitem">
-                                                    <p class="itemtext"><?=$transaksi;?></p>
+                                                    <p class="itemtext"><?=$dt->periksa;?></p>
                                                 </td>
                                                 <td class="tableitem">
-                                                    <p class="itemtext"></p>
-                                                </td>
-                                                <td class="tableitem">
-                                                    <p class="itemtext"></p>
-                                                </td>
-                                                <td class="tableitem">
-                                                    <p class="itemtext"></p>
+                                                    <p class="itemtext"><?=$dt->poli;?></p>
                                                 </td>
                                             </tr>
                                         <?php// endforeach ?>

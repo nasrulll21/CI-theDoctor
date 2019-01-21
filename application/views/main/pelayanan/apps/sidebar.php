@@ -9,7 +9,7 @@
                         <li> <a href="<?=base_url('Admin');?>" ><i class="fa fa-tachometer"></i>Dashboard</a>
                         </li>
                         <li><hr></li>
-                        <li> <a href="<?=base_url('pelayanan_controller/tambah_pasien');?>" ><i class="fa fa-plus"></i>Registrasi</a>
+                        <li> <a href="<?=base_url('pengguna_controller/tambah_pasien');?>" ><i class="fa fa-plus"></i>Registrasi</a>
                         </li>
                         <li> <a href="<?=base_url('pelayanan_controller/data_pasien');?>" ><i class="fa fa-user"></i>Data Pasien</a>
                         </li>

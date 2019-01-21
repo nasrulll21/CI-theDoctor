@@ -19,4 +19,9 @@ class keluhan_model extends CI_Model{
         $this->db->where('status', '1');
         return $this->db->get('cek')->result();
     }
+
+    public function registrasi($id){
+        $query = $this->db->query("SELECT pemeriksaan.nama_pemeriksaan as periksa, poli.nama_poli as poli, pemeriksaan.harga as harga from pemeriksaan, poli, kasir, pasien where kasir.kd_pasien = pasien.kd_pasien and kasir.id_periksa = pemeriksaan.id_periksa and pemeriksaan.id_poli = poli.id_poli AND kasir.kd_pasien = ''");
+        return $query->result();
+    }
 }

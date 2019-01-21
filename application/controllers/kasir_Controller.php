@@ -32,5 +32,10 @@ class kasir_Controller extends CI_Controller {
 		$this->load->view('main/kasir/apps/sidebar');
 		$this->load->view('main/table-data-pasien', $data);
 		$this->load->view('main/kasir/apps/footer');
-    }
+	}
+	public function getTransaksiById() {
+		$idPasien = $this->input->post('idPasien');
+		$data['transaksi'] = $idPasien;
+		$this->load->view('main/kasir/data_transaksi',$data);
+	}
 }

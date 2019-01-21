@@ -23,19 +23,17 @@ class pemeriksaan_controller extends CI_Controller {
             $data=array(
                 'kd_pasien' => $this->input->post('kd'),
                 'id_gejala' => $this->input->post('gejala'.$i),
-                'status' => $this->input->post('sts'.$i)
+                'status' => $this->input->post('sts'.$i) == null ? '0' :  $this->input->post('sts'.$i)
             );
             $query = $this->db->insert('cek', $data);
             $i++;
         }
     }
 
-    public function poli(){
-        $i=0;
-        $result = $this->db->query("select * from cek");
-        
-        if ('id_gejala'.$i==1 && 'status'.$i==1) {
-          
-        }
+    public function diagnosa($id=''){
+       $data['cek_diagnosa'] = $this->keluhan_model->getCekByid($id);
+       foreach($cek_diagnosa as $cek){
+           echo $cek->kd_pasien;
+       }
     }
 }

@@ -13,4 +13,10 @@ class keluhan_model extends CI_Model{
     public function add_keluhan($id=""){
         
     }
+    
+    public function getCekByid($id){
+        $this->db->where('kd_pasien', $id);
+        $this->db->where('status', '1');
+        return $this->db->get('cek')->result();
+    }
 }

@@ -60,6 +60,29 @@
     <script src="<?=base_url('assets/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js');?>"></script>
     <script src="<?=base_url('assets/js/lib/datatables/datatables-init.js');?>"></script>
 
+    <script>
+        $(document).ready(function() {
+            $("#dataPasien").change(function() { // onChange Function
+                var idPasiens;
+                idPasiens = $("#dataPasien").val(); // document.getElementById("dataPasien").value(); # Menyatakan ID, $ Query Dari JQuery
+                $.ajax({
+                    type : 'POST',
+                    url : "<?=base_url('kasir_controller/getTransaksiById');?>",
+                    data : {idPasien : idPasiens},
+                    async : true,
+                    success : function(response) {
+                        if(!$.trim(response)) {
+                            alert('Data Null!');
+                        } else {
+                            $("#dataTransaksi").html(response);
+                            $("#dataTransaksi").fadeIn();
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>

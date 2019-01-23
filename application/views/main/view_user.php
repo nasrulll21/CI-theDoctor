@@ -1,15 +1,13 @@
-
-
-
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<meta name="description" content="">
+	<meta name="author" content="">
 	<title>DOCTOR-Check Health</title>
-	
+
 	<link rel="stylesheet" href="<?=base_url('assets/user_css/font-awesome.min.css');?>">
 	<link rel="stylesheet" href="<?=base_url('assets/user_css/bootstrap.min.css');?>">
 	<link rel="stylesheet" href="<?=base_url('assets/user_css/style.css');?>">
@@ -22,8 +20,9 @@
     <![endif]-->
 
 </head>
+
 <body>
-	
+
 	<!-- ====================================================
 	header section -->
 	<header class="top-header">
@@ -31,35 +30,35 @@
 			<div class="row">
 				<div class="col-xs-5 header-logo">
 					<br>
-					
+
 					<a href="index.html"><img src="<?=base_url('assets/img/logo2.png');?>" alt="" class="img-responsive logo"></a>
 				</div>
 
 				<div class="col-md-7">
 					<nav class="navbar navbar-default">
-					  <div class="container-fluid nav-bar">
-					    <!-- Brand and toggle get grouped for better mobile display -->
-					    <div class="navbar-header">
-					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					        <span class="sr-only">Toggle navigation</span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					      </button>
-					    </div>
+						<div class="container-fluid nav-bar">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
 
-					    <!-- Collect the nav links, forms, and other content for toggling -->
-					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					      
-					      <ul class="nav navbar-nav navbar-right">
-					        <li><a class="menu active" href="#home" >Home</a></li>
-					        <li><a class="menu" href="#about">The Room</a></li>
-					        <li><a class="menu" href="#service">About Us</a></li>
-					        <li><a class="menu" href="#contact">contact us</a></li>
-					        <li><a class="menu" href="<?=base_url('auth')?>">Login<a</li>
-					      </ul>
-					    </div><!-- /navbar-collapse -->
-					  </div><!-- / .container-fluid -->
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+								<ul class="nav navbar-nav navbar-right">
+									<li><a class="menu active" href="#home">Home</a></li>
+									<li><a class="menu" href="#about">The Room</a></li>
+									<li><a class="menu" href="#contact">contact us</a></li>
+									<li><a class="menu" href="<?=base_url('pengguna_controller/rekam')?>">Rekam medik</a></li>
+									<li><a class="menu" href="<?=base_url('auth')?>">Login</li>
+								</ul>
+							</div><!-- /navbar-collapse -->
+						</div><!-- / .container-fluid -->
 					</nav>
 				</div>
 			</div>
@@ -69,45 +68,45 @@
 	<section class="slider" id="home">
 		<div class="container-fluid">
 			<div class="row">
-			    <div id="carouselHacked" class="carousel slide carousel-fade" data-ride="carousel">
+				<div id="carouselHacked" class="carousel slide carousel-fade" data-ride="carousel">
 					<div class="header-backup"></div>
-			        <!-- Wrapper for slides -->
-			        <div class="carousel-inner" role="listbox">
-			            <div class="item active">
-						
-			            	<img src="<?=base_url('assets/img/slide-one.jpg');?>" alt="">
-			                <div class="carousel-caption">
-			                </div>
-			            </div>
-			            <div class="item">
-						
-			            	<img src="<?=base_url('assets/img/slide-two.jpg');?>" alt="">
-			                <div class="carousel-caption">
-			                </div>
-			            </div>
-			            <div class="item">
-						
-			            	<img src="<?=base_url('assets/img/slide-three.jpg');?>" alt="">
-			                <div class="carousel-caption">
-			                </div>
-			            </div>
-			            <div class="item">
-						
-			            	<img src="<?=base_url('assets/img/slide-four.jpg');?>" alt="">
-			                <div class="carousel-caption">
-			                </div>
-			            </div>
-			        </div>
-			        <!-- Controls -->
-			        <a class="left carousel-control" href="#carouselHacked" role="button" data-slide="prev">
-			            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			            <span class="sr-only">Previous</span>
-			        </a>
-			        <a class="right carousel-control" href="#carouselHacked" role="button" data-slide="next">
-			            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			            <span class="sr-only">Next</span>
-			        </a>
-			    </div>
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+
+							<img src="<?=base_url('assets/img/slide-one.jpg');?>" alt="">
+							<div class="carousel-caption">
+							</div>
+						</div>
+						<div class="item">
+
+							<img src="<?=base_url('assets/img/slide-two.jpg');?>" alt="">
+							<div class="carousel-caption">
+							</div>
+						</div>
+						<div class="item">
+
+							<img src="<?=base_url('assets/img/slide-three.jpg');?>" alt="">
+							<div class="carousel-caption">
+							</div>
+						</div>
+						<div class="item">
+
+							<img src="<?=base_url('assets/img/slide-four.jpg');?>" alt="">
+							<div class="carousel-caption">
+							</div>
+						</div>
+					</div>
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carouselHacked" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#carouselHacked" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
 			</div>
 		</div>
 	</section><!-- end of slider section -->
@@ -117,7 +116,8 @@
 		<div class="container">
 			<div class="row">
 				<h2>Cheking Room</h2>
-				<h4>Di rumah sakit PEDULI memiliki 4 ruang pemeriksaan yang bisa anda kunjungi, berikut penjelasan singkat mengenai setiap ruangan</h4>
+				<h4>Di rumah sakit PEDULI memiliki 4 ruang pemeriksaan yang bisa anda kunjungi, berikut penjelasan singkat mengenai
+					setiap ruangan</h4>
 				<div class="col-md-4 col-sm-6">
 					<div class="single-about-detail clearfix">
 						<div class="about-img">
@@ -128,7 +128,9 @@
 								<h1>L</h1>
 							</div>
 							<h3>Laboratorium</h3>
-							<p>Sarana kesehatan yang melaksanakan pengukuran, penetapan dan pengujian terhadap bahan yang berasal dari manusia atau bahan bukan berasal dari manusia untuk penentuan jenis penyakit, penyebab penyakit, kondisi kesehatan atau faktor yang dapat berpengaruh pada kesehatan perorangan dan kesehatan masyarakat.</p>
+							<p>Sarana kesehatan yang melaksanakan pengukuran, penetapan dan pengujian terhadap bahan yang berasal dari
+								manusia atau bahan bukan berasal dari manusia untuk penentuan jenis penyakit, penyebab penyakit, kondisi
+								kesehatan atau faktor yang dapat berpengaruh pada kesehatan perorangan dan kesehatan masyarakat.</p>
 						</div>
 					</div>
 				</div>
@@ -143,7 +145,9 @@
 							</div>
 
 							<h3>Radiologi</h3>
-							<p>Ilmu kedokteran untuk melihat bagian rama tubuh manusia menggunakan pancaran atau radiasi gelombang, baik gelombang elektromagnetik maupun gelombang mekanik.Pemeriksaan radiologi dijalankan untuk mengetahui kondisi bagian dalam tubuh pasien, dan untuk menentukan penyebab penyakit yang diderita oleh pasien. </p>
+							<p>Ilmu kedokteran untuk melihat bagian rama tubuh manusia menggunakan pancaran atau radiasi gelombang, baik
+								gelombang elektromagnetik maupun gelombang mekanik.Pemeriksaan radiologi dijalankan untuk mengetahui kondisi
+								bagian dalam tubuh pasien, dan untuk menentukan penyebab penyakit yang diderita oleh pasien. </p>
 						</div>
 					</div>
 				</div>
@@ -157,11 +161,13 @@
 								<h1>O</h1>
 							</div>
 							<h3>Operasi</h3>
-							<p>suatu unit khusus di rumah sakit, tempat untuk melakukan tindakan pembedahan, baik elektif maupun emergency, yang membutuhkan keadaan suci hama (steril). Kamar bedah adalah ruang dimana dilakukan tindakan tindakan sehubungan dengan pembedahan. Ruangan ini merupakan ruangan terbatas/ ketat,</p>
+							<p>suatu unit khusus di rumah sakit, tempat untuk melakukan tindakan pembedahan, baik elektif maupun emergency,
+								yang membutuhkan keadaan suci hama (steril). Kamar bedah adalah ruang dimana dilakukan tindakan tindakan
+								sehubungan dengan pembedahan. Ruangan ini merupakan ruangan terbatas/ ketat,</p>
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 	</section><!-- end of about section -->
@@ -187,7 +193,7 @@
 					<div class="single-service">
 						<div class="single-service-img">
 							<div class="service-img">
-							
+
 								<img class="brain img-responsive" src="<?=base_url('assets/img/service2.png');?>" alt="">
 							</div>
 						</div>
@@ -198,7 +204,7 @@
 					<div class="single-service">
 						<div class="single-service-img">
 							<div class="service-img">
-							
+
 								<img class="knee img-responsive" src="<?=base_url('assets/img/service3.png');?>" alt="">
 							</div>
 						</div>
@@ -209,7 +215,7 @@
 					<div class="single-service">
 						<div class="single-service-img">
 							<div class="service-img">
-							
+
 								<img class="bone img-responsive" src="<?=base_url('assets/img/service4.png');?>" alt="">
 							</div>
 						</div>
@@ -240,14 +246,24 @@
 					<div class="col-md-5 contact-info text-left">
 						<h3>contact information</h3>
 						<div class="info-detail">
-							<ul><li><i class="fa fa-calendar"></i><span>Monday - Friday:</span> 9:30 AM to 6:30 PM</li></ul>
-							<ul><li><i class="fa fa-map-marker"></i><span>Address:</span> 123 Some Street , London, UK, CP 123</li></ul>
-							<ul><li><i class="fa fa-phone"></i><span>Phone:</span> (032) 987-1235</li></ul>
-							<ul><li><i class="fa fa-fax"></i><span>Fax:</span> (123) 984-1234</li></ul>
-							<ul><li><i class="fa fa-envelope"></i><span>Email:</span> info@doctor.com</li></ul>
+							<ul>
+								<li><i class="fa fa-calendar"></i><span>Monday - Friday:</span> 9:30 AM to 6:30 PM</li>
+							</ul>
+							<ul>
+								<li><i class="fa fa-map-marker"></i><span>Address:</span> 123 Some Street , London, UK, CP 123</li>
+							</ul>
+							<ul>
+								<li><i class="fa fa-phone"></i><span>Phone:</span> (032) 987-1235</li>
+							</ul>
+							<ul>
+								<li><i class="fa fa-fax"></i><span>Fax:</span> (123) 984-1234</li>
+							</ul>
+							<ul>
+								<li><i class="fa fa-envelope"></i><span>Email:</span> info@doctor.com</li>
+							</ul>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
@@ -279,4 +295,5 @@
 	<script src="<?=base_url('assets/user_js/bootstrap.min.js');?>"></script>
 	<script src="<?=base_url('assets/user_js/custom.js');?>"></script>
 </body>
+
 </html>

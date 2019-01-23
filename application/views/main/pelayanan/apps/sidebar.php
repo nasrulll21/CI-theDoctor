@@ -1,19 +1,21 @@
 <!-- Left Sidebar  -->
 <div class="left-sidebar">
-            <!-- Sidebar scroll-->
-            <div class="scroll-sidebar">
-                <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="nav-devider"></li>
-                        <li> <a href="<?=base_url('Admin');?>" ><i class="fa fa-tachometer"></i>Dashboard</a>
-                        </li>
-                        <li><hr></li>
-                        <li> <a href="<?=base_url('pengguna_controller/tambah_pasien');?>" ><i class="fa fa-plus"></i>Registrasi</a>
-                        </li>
-                        <li> <a href="<?=base_url('pelayanan_controller/data_pasien');?>" ><i class="fa fa-user"></i>Data Pasien</a>
-                        </li>
-                        <!-- <li class="nav-label">Features</li>
+	<!-- Sidebar scroll-->
+	<div class="scroll-sidebar">
+		<!-- Sidebar navigation-->
+		<nav class="sidebar-nav">
+			<ul id="sidebarnav">
+				<li class="nav-devider"></li>
+				<li> <a href="<?=base_url('Admin');?>"><i class="fa fa-tachometer"></i>Dashboard</a>
+				</li>
+				<li>
+					<hr>
+				</li>
+				<li> <a href="<?=base_url('pengguna_controller/tambah_pasien');?>"><i class="fa fa-plus"></i>Registrasi</a>
+				</li>
+				<li> <a href="<?=base_url('pelayanan_controller/data_pasien');?>"><i class="fa fa-user"></i>Data Pasien</a>
+				</li>
+				<!-- <li class="nav-label">Features</li>
 						<li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-suitcase"></i><span class="hide-menu">Components <span class="label label-rouded label-danger pull-right">6</span></span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="">Calender</a></li>
@@ -91,10 +93,10 @@
                                 <li><a href="#">item 1.4</a></li>
                             </ul>
                         </li> -->
-                    </ul>
-                </nav>
-                <!-- End Sidebar navigation -->
-            </div>
-            <!-- End Sidebar scroll-->
-        </div>
-        <!-- End Left Sidebar  -->
+			</ul>
+		</nav>
+		<!-- End Sidebar navigation -->
+	</div>
+	<!-- End Sidebar scroll-->
+</div>
+<!-- End Left Sidebar  -->

@@ -26,4 +26,8 @@ class periksa_model extends CI_Model{
         $this->db->where('kd_pasien',$id);
         return $this->db->get('pasien')->result();
     }
+    public function select_poli($id){
+		$this->db->where('id_poli', $id);
+		return $this->db->get('pasien')->result();
+    }
 }

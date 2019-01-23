@@ -61,4 +61,13 @@ class pemeriksaan_controller extends CI_Controller {
            echo $cek->kd_pasien;
        }
     }
+    public function poli($id){
+        $data['gejala'] = $this->keluhan_model->getGejala();
+        $data['poli'] = $this->Periksa_model->select_poli($id);
+        $this->load->view('main/dokter/apps/header');
+        $this->load->view('main/dokter/apps/admin');
+        $this->load->view('main/dokter/apps/sidebar');
+        $this->load->view('main/dokter/umum', $data);
+        $this->load->view('main/dokter/apps/footer');    
+    }   
 }

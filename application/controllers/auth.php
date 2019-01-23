@@ -7,17 +7,20 @@ class auth extends CI_Controller{
     function index(){
         if ($this->session->userdata('username') != NULL && $this->session->userdata('pass') != NULL) {
 			switch ($this->session->userdata('level')) {
+				case '0' :
+					redirect('Admin');
+				break;
 				case '1' :
-					redirect('halaman_admin');
+					redirect('direktur_controller');
 				break;
 				case '2' :
-					redirect('halaman_pasien');
+					redirect('pelayanan_controller');
 				break;
 				case '3' :
-					redirect('halaman_kasir');
+					redirect('pemeriksaan_controller');
 				break;
 				case '4' :
-					redirect('halaman_perawat');
+					redirect('kasir_controller');
 				break;
 			}
 		}

@@ -5,24 +5,20 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li class="nav-devider"></li>
-                        <li> <a href="<?=base_url('Admin');?>" ><i class="fa fa-tachometer"></i>Dashboard</a>
+                    <li> <a href="<?=base_url('Admin');?>" ><i class="fa fa-tachometer"></i>Dashboard</a>
                         </li>
-                        <li class="nav-label">Data Tabel Master</li>
-                    
-                        <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">POLI</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                            <!-- Admin/pengguna/pasien  
-                            Admin/pengguna/perawat
-                            Admin/pengguna/kasir  -->
-
-                                <li> <a href="<?=base_url('pengguna_Controller/tambah_akun');?>"><span class="hide-menu"><i class="fa fa-user"></i> Poli Umum</span></a></li>
-                                <li> <a href="<?=base_url('pengguna_Controller/direktur');?>"><span class="hide-menu"><i class="fa fa-user"></i> Poli Penyakit Dalam</span></a></li>
-                                <li> <a href="<?=base_url('pengguna_Controller/plyanan');?>"><span class="hide-menu"><i class="fa fa-user"></i> Poli THT</span></a></li>
-                                <li> <a href="<?=base_url('pengguna_Controller/dokter');?>"><span class="hide-menu"><i class="fa fa-user"></i> Poli Saraf</span></a></li>
-                                <li> <a href="<?=base_url('pengguna_Controller/kasir');?>"><span class="hide-menu"><i class="fa fa-user"></i> Poli Bedah</span></a></li>
-                                <li> <a href="<?=base_url('pengguna_Controller/kasir');?>"><span class="hide-menu"><i class="fa fa-user"></i> Poli Kebidanan</span></a></li>
-                            </ul>
+                        <li><hr></li>
+                        <li> <a href="<?=base_url('pemeriksaan_controller/poli/1');?>" ><i class="fa fa-stethoscope"></i>Poli Umum</a>
+                        </li>
+                        <li> <a href="<?=base_url('pemeriksaan_controller/poli/2');?>" ><i class="fa fa-stethoscope"></i>Poli Penyakit</a>
+                        </li>
+                        <li> <a href="<?=base_url('pemeriksaan_controller/poli/3');?>" ><i class="fa fa-stethoscope"></i>Poli THT</a>
+                        </li>
+                        <li> <a href="<?=base_url('pemeriksaan_controller/poli/4');?>" ><i class="fa fa-stethoscope"></i>Poli Saraf</a>
+                        </li>
+                        <li> <a href="<?=base_url('pemeriksaan_controller/poli/5');?>" ><i class="fa fa-stethoscope"></i>Poli Bedah</a>
+                        </li>
+                        <li> <a href="<?=base_url('pemeriksaan_controller/poli/6');?>" ><i class="fa fa-stethoscope"></i>Poli kebidanan</a>
                         </li>
                         <!-- <li class="nav-label">Features</li>
 						<li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-suitcase"></i><span class="hide-menu">Components <span class="label label-rouded label-danger pull-right">6</span></span></a>

@@ -16,6 +16,7 @@
                                  Admin/periksa/operasi  -->
 
                                 <li> <a href="<?=base_url('Admin/laboratorium');?>"><i class="fa fa-envelope"></i><span class="hide-menu"> Laboratorium</span></a></li>
+                                <li> <a href="<?=base_url('Admin/laboratorium');?>"><i class="fa fa-envelope"></i><span class="hide-menu"> Klinik</span></a></li>
                                 <li> <a href="<?=base_url('Admin/radiologi');?>"><i class="fa fa-envelope"></i><span class="hide-menu"> Radiologi</span></a></li>
                                 <li> <a href="<?=base_url('Admin/operasi');?>" ><i class="fa fa-envelope"></i><span class="hide-menu"> Operasi</span></a></li>
                             </ul>
